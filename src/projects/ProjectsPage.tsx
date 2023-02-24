@@ -9,10 +9,10 @@ const ProjectsPage = (props: Props) => {
   const [projects, setProPects] = useState(MOCK_PROJECTS);
 
   const saveProject = (project: Project) => {
-      let updatedProjects = projects.map((p: Project) => {
-        return p.id === project.id ? project : p;
-      });
-      setProPects(updatedProjects);
+    let updatedProjects = projects.map((p: Project) => {
+      return p.id === project.id ? project : p;
+    });
+    setProPects(updatedProjects);
   };
 
   return (
@@ -26,3 +26,11 @@ const ProjectsPage = (props: Props) => {
 }
 
 export default ProjectsPage;
+
+
+/* let updatedProjects = projects.map((p: Project) => {
+  return p.id === project.id ? project : p;
+}); */
+//this code checks if the p.id (coming from MOCK_PROJECTS/or later API) is matching
+//the project.id (this id is coming from project form (after handleSubmit)) after 
+//submission of the form via save button.
